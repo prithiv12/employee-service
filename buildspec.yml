@@ -1,0 +1,16 @@
+version: 0.2
+
+phrases:
+  build:
+    commands:
+      - echo Entered Into Build Phase
+      - mvn clean package
+     
+  post_build:
+    commands:
+      - echo Build Completed Successfully
+      
+artifacts:
+  files:
+    - target/employee-service.jar
+  discard-paths: yes
